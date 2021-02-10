@@ -1,0 +1,194 @@
+/* THE WHOLE PAGE */
+
+*{
+    font-family: 'Raleway';
+    box-sizing:border-box;
+    margin: 0;
+    padding:0;
+}
+
+
+/* Font */
+@font-face {
+    font-family: 'Raleway';
+    src: url('fonts/Raleway-Regular.woff2') format('woff2'),
+         url('fonts/Raleway-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* Header */
+#logo
+{
+    display:flex;
+    width: 50px;
+    height:50px;
+}
+
+nav{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+nav ul li{
+    list-style: none;
+    display:inline;
+}
+
+nav ul li a{
+    text-decoration:none;
+    margin-right: 20px;
+    color:#0065FC; 
+}
+
+a:hover{
+    color:black;
+}
+
+#subhead{
+    margin-top:25px;
+    font-size:8px;
+}
+
+h2{
+    font-size:13px;
+    font-weight: lighter;
+    margin-bottom:9px;
+}
+
+.search{
+    margin-bottom:25px;
+}
+
+.information{
+    margin-top: 25px;
+}
+
+.fa-map-marker-alt{
+    background-color: #DEEBFF;
+    display: inline-block;
+    border-radius: 15px 0px 0px 15px; 
+    padding: 9px;
+}
+
+.searchButton{
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 9px;
+    text-decoration: none;
+    background: #0065FC;
+    color: white;
+    border-radius: 0px 15px 15px 0px;   
+    border: none; 
+}
+
+.textAreaSearch{
+    display: inline-block;
+    padding: 7px;
+    border-right: none;
+    border-left: none;
+}
+
+/* FILTERS / FONT AWESOME ICONS */
+#filters, .money, .child, .heart, .dog{
+    display: inline-block;
+}
+
+#filters, .button{
+    position:relative;
+    display:inline-block;
+    font-weight:900;
+    padding: 9px;
+    text-decoration:none;
+    background: white;
+    border-radius: 0px 15px 15px 0px;
+    border-width:2px;
+    border-color: #DEEBFF;
+    transition: 2s;
+}
+
+.button:hover{
+    background:#DEEBFF;
+}
+
+.money, .child, .heart, .dog{
+    padding-left:10px;
+
+}
+    
+
+.fa-money-bill-wave{
+    color:#0065FC;
+    display: inline-block;
+    border-radius: 50%;
+    padding: 9px;
+    background-color: #DEEBFF;
+}
+
+.fa-child{
+    color:#0065FC;
+    display: inline-block;
+    border-radius: 50%;
+    padding: 9px;
+    background-color: #DEEBFF;
+}
+
+.fa-heart{
+    color:#0065FC;
+    display: inline-block;
+    border-radius: 50%;
+    padding: 9px;
+    background-color: #DEEBFF;
+}
+
+.fa-dog{
+    color:#0065FC;
+    display: inline-block;
+    border-radius: 50%;
+    padding: 9px;
+    background-color: #DEEBFF;
+}
+
+
+
+
+.information{
+    font-size: 12px;
+}
+
+.fa-info{
+    color: #0065FC;
+    display: inline-block;
+    border-radius: 50px;
+    padding: 5px;
+    box-shadow: 0px 0px 2px #888;
+
+}
+
+/* Body */
+
+.accomodation{
+
+}
+
+
+/* Footer */ 
+
+footer{
+    background-color:#F2F2F2;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer li{
+    list-style: none;
+}
+
+footer li a{
+    text-decoration: none;
+    color: black;
+}
