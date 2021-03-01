@@ -1,12 +1,16 @@
-/* THE WHOLE PAGE */
+/* Toute la Page */
 
 *{
     font-family: 'Raleway';
-    box-sizing:border-box;
+    box-sizing: border-box;
     margin: 0;
     padding:0;
 }
 
+header, main{
+    padding-left: 50px;
+    padding-right: 50px;
+}
 
 /* Font */
 @font-face {
@@ -20,17 +24,23 @@
 
 
 /* Header */
+header{
+    height: 400px;
+}
+
 #logo
 {
     display:flex;
     width: 50px;
     height:50px;
+    margin-top: 50px;
 }
 
 nav{
     position: absolute;
+    right: 50px;
     top: 0px;
-    right: 0px;
+    margin-top: 50px;
 }
 
 nav ul li{
@@ -49,25 +59,26 @@ a:hover{
 }
 
 #subhead{
-    margin-top:25px;
+    margin-top:50px;
     font-size:8px;
 }
 
 h2{
     font-size:13px;
     font-weight: lighter;
-    margin-bottom:9px;
+    margin-top: 15px;
+    margin-bottom: 25px;
 }
 
 .search{
-    margin-bottom:25px;
+    margin-bottom:30px;
 }
 
 .information{
-    margin-top: 25px;
+    margin-top: 35px;
 }
 
-.fa-map-marker-alt{
+span{
     background-color: #DEEBFF;
     display: inline-block;
     border-radius: 15px 0px 0px 15px; 
@@ -75,8 +86,6 @@ h2{
 }
 
 .searchButton{
-    position: relative;
-    display: inline-block;
     font-weight: bold;
     padding: 9px;
     text-decoration: none;
@@ -87,40 +96,37 @@ h2{
 }
 
 .textAreaSearch{
-    display: inline-block;
     padding: 7px;
     border-right: none;
     border-left: none;
 }
 
 /* FILTERS / FONT AWESOME ICONS */
+
 #filters, .money, .child, .heart, .dog{
     display: inline-block;
 }
 
-#filters, .button{
-    position:relative;
+.btn{
     display:inline-block;
     font-weight:900;
     padding: 9px;
     text-decoration:none;
     background: white;
-    border-radius: 0px 15px 15px 0px;
+    border-radius: 35px;
     border-width:2px;
     border-color: #DEEBFF;
     transition: 2s;
 }
 
-.button:hover{
+.btn:hover{
     background:#DEEBFF;
 }
 
 .money, .child, .heart, .dog{
     padding-left:10px;
-
 }
     
-
 .fa-money-bill-wave{
     color:#0065FC;
     display: inline-block;
@@ -153,9 +159,6 @@ h2{
     background-color: #DEEBFF;
 }
 
-
-
-
 .information{
     font-size: 12px;
 }
@@ -171,10 +174,122 @@ h2{
 
 /* Body */
 
-.accomodation{
-
+body{
+    height: 1250px;
 }
 
+/* CONTAINER Hébergements à Marseille */
+
+.container{
+    width: 820px;
+    height: 620px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    position: relative;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 65px;
+}
+
+.container h1{
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.accomodation{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.accomodation img{
+    width: 100px;
+    height: 100px;
+    inline-size: 200px;
+    object-fit: cover;
+}
+
+.accomodation figure{
+    background: white;
+    border-radius: 20px;
+}
+
+/* CONTAINER Les plus populaires */
+
+.container2{
+    width: 420px;
+    height: 620px;
+    background-color: #f2f2f2;
+    float: right;
+    border-radius: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.container2 h1{
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.popular{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.popular img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.fa-chart-line{
+    float: right;
+    right: 0px;
+    top: 0px;
+}
+
+.popular figcaption{
+    float: right;
+}
+
+.popular figure{
+    background: white;
+    padding-left: 15px; 
+    border-radius: 10px;
+}
+
+/* CONTAINER Activités à Marseille */ 
+
+.container3{
+    width: 100%;   
+    margin-bottom: 60px;
+}
+
+.container3 h1{
+    padding-bottom: 25px;
+}
+
+.activities{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.activities img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+/* Etoiles */
+
+.fa-star{
+    color: #DEEBFF;
+}
+
+.fa-star.blue{
+    color: #0065FC;
+}
 
 /* Footer */ 
 
@@ -182,6 +297,10 @@ footer{
     background-color:#F2F2F2;
     display: flex;
     justify-content: space-around;
+    bottom: 0;
+    width: 100%;
+    height: 220px;
+    padding-top: 50px;
 }
 
 footer li{
