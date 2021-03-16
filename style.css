@@ -25,7 +25,7 @@ header, main{
 
 /* Header */
 header{
-    height: 400px;
+    height: 340px;
 }
 
 #logo
@@ -40,34 +40,68 @@ nav{
     position: absolute;
     right: 50px;
     top: 0px;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 nav ul li{
     list-style: none;
-    display:inline;
+    display:inline-block;
+    width: 160px;
+    text-align: center;
+}
+
+nav ul li a:hover, nav ul li a:focus, nav ul li a:active{
+    color: #999;
+    text-decoration: none;
 }
 
 nav ul li a{
-    text-decoration:none;
-    margin-right: 20px;
-    color:#0065FC; 
+    position: relative;
+    display: block;
+    margin: 0 12px;
+    letter-spacing: 1px;
+    line-height: 85px;
+    font-weight: 900;
+    text-decoration: none;
+    transition: color 0.1s, background-color 0.1s, padding 0.2s, ease-in;
+    color: #0065FC;
 }
 
-a:hover{
-    color:black;
+nav ul li a::before{
+    content:'';
+    display: block;
+    position: absolute;
+    bottom: 112px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #0065FC;
+    transform-origin: left top; 
+    transform: scale(0, 1);
+    transition: color 0.1s, transform 0.2s ease-out;
 }
 
-#subhead{
-    margin-top:50px;
-    font-size:8px;
+nav ul li a:active::before{
+    background-color: #0065FC;
 }
 
-h2{
+nav ul li a:hover::before, a:focus::before {
+    transform-origin: left;
+    transform: scale(1, 1); 
+}
+
+
+
+#subhead h1{
+    margin-top:45px;
+    font-size:15px;
+}
+
+#subhead h2{
     font-size:13px;
     font-weight: lighter;
-    margin-top: 15px;
-    margin-bottom: 25px;
+    margin-top: 8px;
+    margin-bottom: 17px;
 }
 
 .search{
@@ -75,14 +109,18 @@ h2{
 }
 
 .information{
-    margin-top: 35px;
+    margin-top: 30px;
 }
 
-span{
+label{
     background-color: #DEEBFF;
     display: inline-block;
     border-radius: 15px 0px 0px 15px; 
     padding: 9px;
+}
+
+.search form{
+    display: flex;
 }
 
 .searchButton{
@@ -95,68 +133,61 @@ span{
     border: none; 
 }
 
+.searchButton:hover{
+    color: black;
+    background: #DEEBFF;
+    transition: 2s;
+}
+
 .textAreaSearch{
     padding: 7px;
     border-right: none;
     border-left: none;
+    border: 1px solid;
+    border-color: #f2f2f2;
 }
 
 /* FILTERS / FONT AWESOME ICONS */
 
-#filters, .money, .child, .heart, .dog{
-    display: inline-block;
+#filters{
+    display: inline-flex;
+    align-items: center;
 }
 
 .btn{
-    display:inline-block;
+    display:flex;
     font-weight:900;
-    padding: 9px;
     text-decoration:none;
     background: white;
-    border-radius: 35px;
-    border-width:2px;
-    border-color: #DEEBFF;
-    transition: 2s;
+    border-radius: 20px;
+    border: 2px solid;
+    border-left: none;
+    border-color: rgb(217, 217, 217);
+    transition: 1s;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn:hover{
     background:#DEEBFF;
 }
 
+.btn span{
+    margin-right: 7px;
+}
+
 .money, .child, .heart, .dog{
     padding-left:10px;
 }
-    
-.fa-money-bill-wave{
-    color:#0065FC;
-    display: inline-block;
-    border-radius: 50%;
-    padding: 9px;
-    background-color: #DEEBFF;
-}
 
-.fa-child{
+.fa-money-bill-wave, .fa-child, .fa-heart, .fa-dog{
     color:#0065FC;
-    display: inline-block;
+    display: flex;
     border-radius: 50%;
     padding: 9px;
     background-color: #DEEBFF;
-}
-
-.fa-heart{
-    color:#0065FC;
-    display: inline-block;
-    border-radius: 50%;
-    padding: 9px;
-    background-color: #DEEBFF;
-}
-
-.fa-dog{
-    color:#0065FC;
-    display: inline-block;
-    border-radius: 50%;
-    padding: 9px;
-    background-color: #DEEBFF;
+    margin-right: 7px;
 }
 
 .information{
@@ -165,130 +196,264 @@ span{
 
 .fa-info{
     color: #0065FC;
-    display: inline-block;
-    border-radius: 50px;
-    padding: 5px;
+    display: inline-flex;
+    border-radius: 50%;
+    padding: 0.5em 0.6em;
     box-shadow: 0px 0px 2px #888;
+    float:left;
+    margin-right: 12px;
+}
 
+.information p{
+    padding-top: 4px; 
 }
 
 /* Body */
 
-body{
+main{
     height: 1250px;
 }
 
 /* CONTAINER Hébergements à Marseille */
 
 .container{
-    width: 820px;
+    width: 870px;
     height: 620px;
     background-color: #f2f2f2;
     border-radius: 10px;
+    padding-left: 30px;
     position: relative;
-    padding-left: 40px;
-    padding-right: 40px;
     margin-bottom: 65px;
+    box-shadow: 0 0 2px grey;
 }
 
-.container h1{
-    padding-top: 50px;
+.container h2{
+    padding-top: 30px;
     padding-bottom: 30px;
+    font-size: 19px;
 }
 
 .accomodation{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    row-gap: 30px;
+    column-gap: 30px;
 }
-
-.accomodation img{
-    width: 100px;
-    height: 100px;
-    inline-size: 200px;
+.accomodation figure img{
+    width: 250px;
+    height: 120px;
+    display: flex;
     object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 5px;
 }
 
 .accomodation figure{
     background: white;
     border-radius: 20px;
+    width: 250px;
+    height: 200px;
+    box-shadow: 0 0 8px grey;
+}
+
+.accomodation figcaption{
+    padding-left: 15px;
+}
+
+.showMore a{
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    bottom: 50px;
+    left:45px;
+}
+
+.showMore a:hover{
+    transition: 1s;
+    color:lightblue;
 }
 
 /* CONTAINER Les plus populaires */
 
 .container2{
-    width: 420px;
+    width: 430px;
     height: 620px;
     background-color: #f2f2f2;
     float: right;
     border-radius: 10px;
     padding-left: 40px;
     padding-right: 40px;
+    padding-bottom: 35px;
+    box-shadow: 0 0 2px grey;
 }
 
-.container2 h1{
-    padding-top: 50px;
+.container2 h2{
+    padding-top: 30px;
     padding-bottom: 30px;
+    font-size: 19px;
+}
+
+.container2 h2 i{
+    float: right;
 }
 
 .popular{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    row-gap: 30px;
 }
 
 .popular img{
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 145px;
     object-fit: cover;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 5px;
 }
 
-.fa-chart-line{
-    float: right;
-    right: 0px;
-    top: 0px;
-}
+
 
 .popular figcaption{
     float: right;
+    padding-right:55px;
+    padding-top: 20px;
 }
 
 .popular figure{
     background: white;
-    padding-left: 15px; 
-    border-radius: 10px;
+    border-radius: 20px;
+    width: 350px;
+    height: 145px;
+    box-shadow: 0 0 8px grey;
 }
+
+
 
 /* CONTAINER Activités à Marseille */ 
 
 .container3{
-    width: 100%;   
+    width: 1800px;   
     margin-bottom: 60px;
 }
 
-.container3 h1{
+.container3 h2{
     padding-bottom: 25px;
+    font-size: 19px;
 }
 
 .activities{
     display:flex;
-    flex-wrap: wrap;
+    row-gap: 30px;
+    column-gap: 73px;
 }
 
 .activities img{
-    width: 100px;
-    height: 100px;
     object-fit: cover;
+    width: 300px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
+.activities figure{
+    box-shadow: 0 0 5px grey;
+    border-radius: 20px;
+    border-color: grey;
+}
+
+.activities figure figcaption{
+    padding-left: 20px;
+    padding-top: 15px;
+    font-weight: 900;
+}
+
+.port{
+    height: 450px;
+}
+
+.port img{
+    height: 400px;
+}
+
+.fort{
+    height: 240px;
+}
+
+.fort img{
+    height: 180px;
+}
+
+.frioul{
+    height: 165px;
+}
+
+.frioul img{
+    height: 110px;
+}
+
+.calanques{
+    height: 450px;
+}
+
+.calanques img{
+    height: 400px;
+}
+
+.garde{
+    height: 200px;
+}
+
+.garde img{
+    height: 140px;
+}
+
+.longchamp{
+    height: 215px;
+}
+
+.longchamp img{
+    height: 155px;
+}
+
+.VerticalFbox{
+    display: flex;
+    flex-direction: column;
+    row-gap: 45px;
+}
+
+.VerticalFbox2{
+    display: flex;
+    flex-direction: column;
+    row-gap: 35px;
+}
 /* Etoiles */
 
 .fa-star{
     color: #DEEBFF;
+    width: 10px;
+    height: 10px;
+    margin-right: 4px;
 }
 
 .fa-star.blue{
     color: #0065FC;
+    width: 10px;
+    height: 10px;
+    margin-right: 4px;
+}
+
+/** Classement étoile "Hébergements à Marseille **/
+
+.rating{
+    padding-top: 12px;
+    height: 10px;
+}
+
+/** Classement étoiles "Les plus populaires" **/
+
+.rating2{
+    padding-top: 30px;
 }
 
 /* Footer */ 
@@ -296,18 +461,36 @@ body{
 footer{
     background-color:#F2F2F2;
     display: flex;
-    justify-content: space-around;
     bottom: 0;
     width: 100%;
     height: 220px;
     padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+footer div{
+    padding-right: 295px;
 }
 
 footer li{
+    padding-bottom: 20px;
     list-style: none;
+    font-size: 13px;
 }
 
 footer li a{
     text-decoration: none;
     color: black;
+}
+
+footer h1{
+    font-size: 15px;
+    font-weight: 900;
+    padding-bottom: 30px;
+}
+
+footer li a:hover{
+    color: #999;
+    transition: 1.5s;
 }
