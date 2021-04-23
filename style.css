@@ -4,7 +4,7 @@
     font-family: 'Raleway';
     box-sizing: border-box;
     margin: 0;
-    padding:0;
+    padding: 0;
 }
 
 header, main{
@@ -34,6 +34,12 @@ header{
     width: 50px;
     height:50px;
     margin-top: 50px;
+}
+
+.navigation{
+    display: flex;
+    position: unset;
+    justify-content: space-between;
 }
 
 nav{
@@ -90,8 +96,6 @@ nav ul li a:hover::before, a:focus::before {
     transform: scale(1, 1); 
 }
 
-
-
 #subhead h1{
     margin-top:45px;
     font-size:15px;
@@ -105,16 +109,16 @@ nav ul li a:hover::before, a:focus::before {
 }
 
 .search{
-    margin-bottom:30px;
+    margin-bottom:20px;
 }
 
 .information{
-    margin-top: 30px;
+    margin-top: 9px;
 }
 
 label{
     background-color: #DEEBFF;
-    display: inline-block;
+    display: inline-flex;
     border-radius: 15px 0px 0px 15px; 
     padding: 9px;
 }
@@ -134,6 +138,23 @@ label{
 }
 
 .searchButton:hover{
+    color: black;
+    background: #DEEBFF;
+    transition: 2s;
+}
+
+.searchIcon{
+    display: none;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    background: #0065FC;
+    color: white;
+    border-radius: 15px 15px 15px 15px;   
+    border: none; 
+}
+
+.searchIcon:hover{
     color: black;
     background: #DEEBFF;
     transition: 2s;
@@ -217,7 +238,7 @@ main{
 /* CONTAINER Hébergements à Marseille */
 
 .container{
-    width: 870px;
+    width: 61%;
     height: 620px;
     background-color: #f2f2f2;
     border-radius: 10px;
@@ -255,6 +276,7 @@ main{
     width: 250px;
     height: 200px;
     box-shadow: 0 0 8px grey;
+    cursor: pointer;
 }
 
 .accomodation figcaption{
@@ -267,6 +289,7 @@ main{
     position: absolute;
     bottom: 50px;
     left:45px;
+    font-weight: 900;
 }
 
 .showMore a:hover{
@@ -277,7 +300,7 @@ main{
 /* CONTAINER Les plus populaires */
 
 .container2{
-    width: 430px;
+    width: 30%;
     height: 620px;
     background-color: #f2f2f2;
     float: right;
@@ -327,6 +350,7 @@ main{
     width: 350px;
     height: 145px;
     box-shadow: 0 0 8px grey;
+    cursor: pointer;
 }
 
 
@@ -334,7 +358,7 @@ main{
 /* CONTAINER Activités à Marseille */ 
 
 .container3{
-    width: 1800px;   
+    width: 100%;   
     margin-bottom: 60px;
 }
 
@@ -360,6 +384,7 @@ main{
     box-shadow: 0 0 5px grey;
     border-radius: 20px;
     border-color: grey;
+    cursor: pointer;
 }
 
 .activities figure figcaption{
@@ -493,4 +518,615 @@ footer h1{
 footer li a:hover{
     color: #999;
     transition: 1.5s;
+}
+
+
+/** Responsive **/
+
+/** Taille d'écran maximale : 768px **/
+
+@media screen and (max-width: 768px) {
+
+    header{
+        padding-right: 5%;
+        padding-left: 5%;
+        height: 690px;
+    }
+    
+    body{
+        height: 4550px;
+        position: relative;
+    }
+
+    #logo{
+        margin-top: 30px;
+        position: relative;
+    }
+
+    main{
+        padding-right: unset;
+        padding-left: unset;
+    }
+
+/* Nav */ 
+    nav ul{
+        display:flex;
+    }
+
+    nav ul li{
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+    }
+
+    nav ul .accomodationMobile a::before{
+        top: 70px;
+    }
+
+    nav ul .activitiesMobile a::before{
+        top: 70px;
+    }
+
+    .inscriptionMobile{
+        position: absolute;
+        top: -20px;
+        right: -20px;
+    }
+
+    .accomodationMobile, .activitiesMobile{
+        padding-top: 40px;
+        margin-top: 40px;
+    }
+
+    .activitiesMobile{
+        margin-left: 60px;
+    }
+
+/* Sous titres */
+
+    #subhead{
+        margin-top: 170px;
+        margin-bottom: 40px;
+    }
+
+    #subhead h1{
+        font-size: 17px;
+    }
+
+    #subhead h2{
+        margin-bottom: unset;
+    }
+
+/* Boutons Filtres (économique, familial, romantique, animaux autorissés) */
+
+    .money, .child, .heart, .dog{    
+        height: 45px;
+        display: flex;
+        position: relative;
+        margin-right: 1px;
+        padding-left: unset;
+    }
+
+    .btn{
+        font-size: 15px;
+        padding-right: 25px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .money button{
+        width: 175px;
+    }
+
+    .child button{
+        width: 145px;
+    }
+
+    .heart button{
+        width: 170px;
+    } 
+
+    .dog button{
+        width: 220px;
+    }
+
+    .fa-money-bill-wave, .fa-child, .fa-heart, .fa-dog{
+        padding: 15px;
+        margin-right: 11px;
+    }
+    
+    #filters{
+        width: 375px;
+        flex-wrap: wrap;
+        column-gap: 10px;
+        row-gap: 15px;
+    }
+
+    .filtersSub{
+        width: 100%;
+        font-weight: 900;
+    }
+
+
+/* Barre de Recherche */
+
+    .search{
+        height: 50px;
+    }
+
+    .searchButton{
+        display: none;
+    }
+
+    .searchIcon{
+        display: block;
+    }
+
+    .textAreaSearch{
+        width: 240px;
+        border-right: none;
+        padding-left: 20px;
+        font-weight: 900;
+    }
+
+    label{
+        width: 50px;
+        align-items: center;
+    }
+
+    .fa-map-marker-alt{
+        padding-left: 11px;
+    }
+
+/* Les plus populaires */
+
+    .container2{
+        display:flex;
+        width: 100%;
+        flex-direction: column;
+        height: 520px;
+        border-radius: unset;
+        box-shadow: unset;
+        padding-right: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container2 h2{
+        width: 335px;
+    }
+
+    .popular{
+        row-gap:10px;
+        width: 335px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .popular img{
+        width: 130px;
+        height:130px;
+    }
+
+    .popular figure{
+        width: 335px;
+        height: 130px;
+        box-shadow: 0 0 4px grey;
+    }
+
+    .popular figcaption{
+        padding-top: 15px;
+        padding-right: 30px;
+        font-size: 17px;
+    }
+
+
+/* Hébergements à Marseille */
+
+    .container{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        background-color: white;
+        height: 1450px;
+        border-radius: unset;
+        box-shadow: unset;
+        margin-bottom: unset;   
+        justify-content: center;
+        align-items: center;
+        padding-left: 5%;
+    }
+
+    .container h2{
+        padding-top: unset;
+        padding-bottom: 25px;
+    }
+
+    .showMore a{
+        left: 30px;
+        top: 1400px;
+    }
+
+    .accomodation{
+        row-gap: 13px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .accomodation figure{
+        width: 335px;
+        box-shadow: 0 0 4px grey; 
+    }
+
+    .accomodation figure img{
+        width: 335px;
+        height: 115px;
+    }
+
+    .accomodation figcaption{
+        height: 80px;
+    }
+
+/* Activités à Marseille */ 
+
+    .container3{
+        display: flex;
+        padding-left: 5%;
+        height: 1405px;
+        margin-bottom: 40px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container3 h2{
+        padding: unset;
+        top: 2655px;
+        position: absolute;
+    }
+
+    .activities{
+        display: flex;
+        flex-direction: column;
+        width: 335px;
+        row-gap: 25px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .activities img{
+        width:335px;
+        height:130px;
+    }
+
+    .activities figure figcaption{
+        height: 55px;
+        padding-top: 20px;
+    }
+
+    .port, .fort, .frioul, .calanques, .garde, .longchamp{
+        height: 200px;
+    }
+
+    .VerticalFbox, .VerticalFbox2{
+        row-gap: 25px;
+        align-items: center;
+        justify-content: center;
+    }
+
+/* Bas de page */ 
+
+    footer{
+        position: absolute;
+        flex-direction: column;
+        height: 490px;
+        padding-left: 20px;
+        padding-right: unset;
+        width: 100%;
+    }
+
+    footer div{
+        padding-right: unset;
+    }
+
+    footer li{
+        padding-bottom: 15px;
+        font-size: 15px
+    }
+
+    footer h1{
+        padding-bottom: 25px;   
+    }
+
+    .about{
+        padding-bottom: 40px;
+    }
+
+    .accomodation2{
+        padding-bottom: 40px;
+    }
+}
+
+
+
+/* Taille d'écran maximale : 1440px // Minimale : 769px */
+
+@media screen and (min-width: 769px) and (max-width: 1095px) {
+    header, main{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    main{
+        height: auto;
+    }
+
+    /* Hébergements à Marseille */
+
+    .container{
+        height: 900px;
+        padding-right: 3px;
+        width: 60%;
+    }
+
+    .accomodation{
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .accomodation figure{
+        width: 180px;
+        height: 210px;
+    }
+
+    .accomodation figure img{
+        width: 180px;
+
+    }
+
+    /* Les plus populaires */
+
+    .container2{
+        height: 900px;
+        width: 35%;
+    }
+
+    .container2 h2{
+        font-size: 17px;
+    }
+
+    .popular figure{
+        width: 100%;
+        height: auto;
+    }
+
+    .popular figcaption{
+        float: unset;
+        padding: unset;
+        padding-left: 10px;
+    }
+
+    .popular img{
+        width: 100%;
+        height: 120px;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .rating2{
+        padding-top: 10px;
+    }
+
+    /* Activités à Marseille */
+
+    .container3{
+        height: auto;
+    }
+
+    .activities{
+        flex-wrap: wrap;
+        column-gap: 50px;
+        row-gap: 70px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .VerticalFbox{
+        flex-direction: row;
+        column-gap: 50px;
+        row-gap: 70px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .VerticalFbox2{
+        flex-direction: row;    
+        column-gap: 50px;
+        row-gap: 70px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .activities figure{
+        width: 220px;
+        height: 150px;
+        margin-bottom: 40px;
+    }
+
+    .activities img{
+        width: 220px;
+        height: 150px;
+    }
+
+
+    /* Bas de Page */
+
+    footer{
+        position: relative;
+        width: 100%;
+        padding: unset;
+        padding-top: 2%;
+        justify-content: space-between;
+        column-gap: 25%;
+        padding-left: 20px;
+        bottom: 0;
+    }
+
+    .about{
+        padding: unset;
+    }
+
+    .accomodation2{
+        padding: unset;
+    }
+}
+
+
+@media screen and (min-width: 1094px) and (max-width: 1486px){
+    header, main{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    main{
+        height: auto;
+        width: 100%;
+    }
+
+    /* Filtres */
+
+    .money, .child, .heart, .dog{
+        padding-left: 30px;
+    }
+
+    /* Hébergements à Marseille */ 
+
+    .container{
+        width: 60%;
+        padding-right: 30px;
+    }
+
+    .accomodation{
+        align-items: center;
+        justify-content: space-between;
+        row-gap: 40px;
+        column-gap: 20px;
+    }
+
+    .accomodation figure{
+      width: 30%;
+      height: 215px;
+    }
+
+    .accomodation figure img{
+        width: 100%;
+    }
+
+    .showMore a{
+        top: 580px;
+    }
+
+    /* Les plus populaires */ 
+
+    .container2{
+        width: 35%;
+    }
+
+    .popular{
+        justify-content: space-between;
+        row-gap: 20px;
+    }
+
+    .popular figure{
+        width: 100%;
+    }
+
+    .popular figure img{
+        width: 40%;
+    }
+
+    .popular figcaption{
+        padding-right: 7%;
+    }
+
+    /* Activités à Marseille */
+
+    .container3{
+        height: auto;
+        display: flex;
+    }
+
+    .container3 h2{
+        padding: unset;
+        top: 980px;
+        position: absolute;
+    }
+
+    .activities{
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: unset;
+    }
+
+    .activities figure{
+        width: 250px;
+    }
+
+    .activities img{
+        width: 250px;
+    }
+
+    .VerticalFbox{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .VerticalFbox2{
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Bas de Page */
+
+    footer{
+        position: relative;
+        width: 100%;
+        padding: unset;
+        padding-top: 2%;
+        justify-content: space-between;
+        column-gap: 25%;
+        padding-left: 20px;
+        bottom: 0;
+    }
+
+    .about{
+        padding: unset;
+    }
+
+    .accomodation2{
+        padding: unset;
+    }
+    
+}
+
+
+@media screen and (min-width: 1520px){
+
+    .wrapper{
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1520px;
+    }
+
+    nav{
+        position: unset;
+    }
+
+    .money, .child, .heart, .dog{
+        padding-left: 30px;
+    }
+
+    .container{
+        margin-top: 10px;
+    }
 }

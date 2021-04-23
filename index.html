@@ -2,6 +2,8 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
+        <meta name="description" content="Trouvez votre hébergement pour des vacances de rêve sur Reservia">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <link rel="icon" href="pictures/Reservia.svg">
         <script src="https://kit.fontawesome.com/204a26ecfc.js" crossorigin="anonymous"></script>
@@ -9,43 +11,48 @@
     </head>  
     <!--HEADER-->
     <body>
-        <header>
-            <div>
-                <div id="logo">
-                    <img src="pictures/Reservia.svg" alt="">
-                </div>  
+        <div class="wrapper">
+            <header>
+                <div class="navigation">
+                    <div id="logo">
+                        <img src="pictures/Reservia.svg" alt="">
+                    </div> 
+                    
+                    <nav>
+                        <ul>
+                            <li class="accomodationMobile"><a href="#anchorAccomodation">Hébergements</a></li>
+                            <li class="activitiesMobile"><a href="#anchorActivities">Activités</a></li>
+                            <li class="inscriptionMobile"><a href="#">S'inscrire</a></li>
+                        </ul>
+                    </nav>
+                </div>
 
                 <div id="subhead">
                     <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                     <h2>En plein centre ville ou en pleine nature</h2>
                 </div>
-            </div>
-
-            <nav>
-                <ul>
-                    <li><a href="#anchorAccomodation">Hébergements</a></li>
-                    <li><a href="#anchorActivities">Activités</a></li>
-                    <li><a href="#">S'inscrire</a></li>
-                </ul>
-            </nav>
-
-            <div class="search">
-                <form>
-                    <label>
-                        <i class="fas fa-map-marker-alt"></i>
-                    </label>
-                    <input class="textAreaSearch" type="text" placeholder="Marseille, France">
-                    <button class="searchButton">Rechercher</button>
-                </form>
-            </div>
-
-            <div id="filters">Filtres
-                <div class="money">
-                    <button class="btn">
-                        <i class="fas fa-money-bill-wave"></i> 
-                        <span>Économique</span>   
-                    </button>     
+            
+                <div class="search">
+                    <form>
+                        <label>
+                            <i class="fas fa-map-marker-alt"></i>
+                        </label>
+                        <input class="textAreaSearch" type="text" placeholder="Marseille, France">
+                        <button class="searchButton">Rechercher</button>
+                        <button class="searchIcon">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
                 </div>
+
+            <div id="filters">
+                <span class="filtersSub">Filtres</span>
+                    <div class="money">
+                        <button class="btn">
+                            <i class="fas fa-money-bill-wave"></i> 
+                            <span>Économique</span>   
+                        </button>     
+                    </div>
 
                 <div class="child">
                     <button class="btn">
@@ -77,8 +84,8 @@
 
 <!-- ASIDE Les plus populaires -->
 
-            <main>
-                <aside>
+        <main>
+            <aside>
                     <div class="container2">
                         <h2>Les plus populaires <i class="fas fa-chart-line"></i></h2> 
                             <div class="popular">
@@ -264,35 +271,36 @@
                         </div>
                     </div>
                 </section>
-            </main>
+        </main>
 
 <!-- FOOTER -->
 
-        <footer>
-            <div class="about">
-                <h1>A propos</h1>
-                <ul>
-                    <li><a href="#">Fonctionnement du site</a></li>
-                    <li><a href="#">Conditions générales de vente</a></li>
-                    <li><a href="#">Données et condidentialité</a></li>
-                </ul>
-            </div> 
+            <footer>
+                <div class="about">
+                    <h1>A propos</h1>
+                    <ul>
+                        <li><a href="#">Fonctionnement du site</a></li>
+                        <li><a href="#">Conditions générales de vente</a></li>
+                        <li><a href="#">Données et condidentialité</a></li>
+                    </ul>
+                </div> 
 
-            <div class="accomodation2">
-                <h1>Nos hébergements</h1>
-                <ul>
-                    <li><a href="#">Charte qualité</a></li>
-                    <li><a href="#">Soumettre votre hôtel</a></li>
-                </ul>
-            </div>  
+                <div class="accomodation2">
+                    <h1>Nos hébergements</h1>
+                    <ul>
+                        <li><a href="#">Charte qualité</a></li>
+                        <li><a href="#">Soumettre votre hôtel</a></li>
+                    </ul>
+                </div>  
 
-            <div class="assistance">
-                <h1>Assistance</h1>
-                <ul>
-                    <li><a href="#">Centre d'aide</a></li>
-                    <li><a href="#">Nous contacter</a></li>
-                </ul>
-            </div>                    
-        </footer>
+                <div class="assistance">
+                    <h1>Assistance</h1>
+                    <ul>
+                        <li><a href="#">Centre d'aide</a></li>
+                        <li><a href="#">Nous contacter</a></li>
+                    </ul>
+                </div>                    
+            </footer>
+        </div>
     </body>
 </html>
