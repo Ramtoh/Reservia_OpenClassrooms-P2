@@ -636,7 +636,6 @@ footer li a:hover{
     }
     
     #filters{
-        width: 375px;
         flex-wrap: wrap;
         column-gap: 10px;
         row-gap: 15px;
@@ -687,7 +686,8 @@ footer li a:hover{
         height: 520px;
         border-radius: unset;
         box-shadow: unset;
-        padding-right: 20px;
+        padding-right: unset;
+        padding-left: unset;
         align-items: center;
         justify-content: center;
     }
@@ -734,7 +734,7 @@ footer li a:hover{
         margin-bottom: unset;   
         justify-content: center;
         align-items: center;
-        padding-left: 5%;
+        padding-left: unset;
     }
 
     .container h2{
@@ -772,7 +772,6 @@ footer li a:hover{
 
     .container3{
         display: flex;
-        padding-left: 5%;
         height: 1405px;
         margin-bottom: 40px;
         align-items: center;
