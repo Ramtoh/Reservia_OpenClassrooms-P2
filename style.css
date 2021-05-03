@@ -492,10 +492,12 @@ footer{
     padding-top: 50px;
     padding-left: 50px;
     padding-right: 50px;
+    justify-content: space-around; 
+    
 }
 
 footer div{
-    padding-right: 295px;
+    width: 40%;
 }
 
 footer li{
@@ -579,6 +581,7 @@ footer li a:hover{
     }
 
     .activitiesMobile{
+        display: flex;
         margin-left: 60px;
     }
 
@@ -969,7 +972,7 @@ footer li a:hover{
         padding-left: 20px;
         bottom: 0;
     }
-
+    
     .about{
         padding: unset;
     }
@@ -1087,17 +1090,6 @@ footer li a:hover{
 
     /* Bas de Page */
 
-    footer{
-        position: relative;
-        width: 100%;
-        padding: unset;
-        padding-top: 2%;
-        justify-content: space-between;
-        column-gap: 25%;
-        padding-left: 20px;
-        bottom: 0;
-    }
-
     .about{
         padding: unset;
     }
@@ -1127,5 +1119,13 @@ footer li a:hover{
 
     .container{
         margin-top: 10px;
+    }
+}
+
+@media screen and (min-width: 490px) and (max-width: 767px){
+    .accomodationMobile, .activitiesMobile{
+        display: flex;
+        position: relative;
+        right: clamp(10vw, 15vw, 25vw);
     }
 }
