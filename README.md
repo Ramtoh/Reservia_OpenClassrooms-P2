@@ -6,6 +6,8 @@ Le sujet est une entreprise proposant un outil de planification de vacances pour
 
 Reservia répond aussi aux demandes W3C + Responsive 
 
+Site visible : https://ramtoh.github.io/Reservia_OpenClassrooms-P2/
+
 ## Tech
 
 Reservia utilise ces technologies :
